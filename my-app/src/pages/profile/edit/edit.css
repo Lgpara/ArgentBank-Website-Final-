@@ -1,0 +1,104 @@
+.editElement {
+  padding: 0 100px;
+}
+
+.fa-solid {
+  font-size: 36px;
+}
+
+a {
+  color: #61B37B;
+  text-decoration: none;
+}
+
+.editHeader {
+  color: #61B37B;
+  margin-top: 20px;
+}
+.editHeader nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.editHeader nav .topBlock {
+  display: flex;
+  align-items: center;
+}
+.editHeader nav .topBlock .fa-vault {
+  margin-right: 10px;
+}
+.editHeader nav .topBlock h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+.editHeader nav .menu {
+  display: flex;
+  align-items: center;
+}
+.editHeader nav .menu a {
+  margin-left: 35px;
+}
+.editHeader nav .menu a .userIcon {
+  margin-left: 30px;
+}
+.editHeader nav .menu .user {
+  display: flex;
+  align-items: center;
+}
+.editHeader nav .menu .user p {
+  margin-right: -20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main h2 {
+  font-size: 30px;
+  margin-left: -4px;
+  font-weight: 100;
+}
+main form {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+main form .inputElabelContainer {
+  margin-bottom: 10px;
+  margin-right: 12px;
+}
+main form .inputElabelContainer input {
+  width: 140px;
+  height: 20px;
+  border: solid rgb(190, 190, 190) 1px;
+  border-radius: 4px;
+  padding-left: 6px;
+}
+main form .inputElabelContainer #userName::-moz-placeholder {
+  color: black;
+}
+main form .inputElabelContainer #userName::placeholder {
+  color: black;
+}
+main form .inputElabelContainer #firstName, main form .inputElabelContainer #lastName {
+  pointer-events: none;
+  background-color: lightgray;
+}
+main form .formButtonContainer {
+  margin-top: 18px;
+}
+main form .formButtonContainer :nth-child(1) {
+  margin-right: 6px;
+}
+main form .formButtonContainer button {
+  color: white;
+  border: none;
+  background-color: #61B37B;
+  border-radius: 4px;
+  padding: 10px 45px;
+}/*# sourceMappingURL=edit.css.map */

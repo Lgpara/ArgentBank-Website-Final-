@@ -1,0 +1,23 @@
+.AccountContainer {
+    width: calc(100vw - 240px);
+    background-color: #3D3D3D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: white;
+    .data {
+        text-align: start;
+        .accountName {
+            font-size: 18px;
+            font-weight: 100;
+        }
+        .accountBalance {
+            font-size: 30px;
+            margin: 0;
+        }
+    }
+    .fa-solid {}
+}
