@@ -1,13 +1,12 @@
 import { useEffect } from "react"
-import getToken from "../../scripts/getToken.js"
 import { useNavigate } from "react-router"
+import { useSelector } from "react-redux"
 
 
 export default function NoTokenRelocate(){
     const navigate = useNavigate()
-
+    const token = useSelector((state) => state.token)
     useEffect(()=> {
-        const token = getToken()
         if(token === null || token === undefined || token === ""){
             navigate("/login")
         }

@@ -3,11 +3,19 @@ import { useState } from "react"
 import AccountContainer from "../../../components/containers/accountContainer/AccountContainer"
 import "./edit.css"
 import Axios from "axios"
-import getToken from "../../../scripts/getToken.js"
 import { changeUserName } from "../../../app/slices/UserSlice"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { storeToken } from "../../../app/slices/TokenSlice"
+
+
 
 export default function Edit() {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  function removeToken(){
+    dispatch(storeToken(""))
+    navigate("/")
+  }
   const editPlaceholderAccounts = 
     {
       type: "Checking",
@@ -17,13 +25,9 @@ export default function Edit() {
     }
 
 
-  const dispatch = useDispatch()
-  const token = getToken()
+  const token = useSelector((state) => state.token)
   const user = useSelector((state) => state.userData)
 
-  function removeToken() {
-    localStorage.removeItem("token")
-  }
   const accounts = [1, 2, 3]
 
   const [isFocused, setIsFocused] = useState(false)

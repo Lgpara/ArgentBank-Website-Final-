@@ -1,7 +1,6 @@
 import { useEffect } from "react"
-import getToken from "../../scripts/getToken.js"
 import Axios from "axios"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { sendStore } from "../../app/slices/UserSlice.js"
 import { useLocation } from "react-router"
 
@@ -9,8 +8,8 @@ import { useLocation } from "react-router"
 export default function StoreHandler(){
     const location = useLocation()
     const dispatch = useDispatch()
+    const token = useSelector((state) => state.token)
     useEffect(() => {
-      const token = getToken()
       async function tokenForId() {
         const headers = {
           Authorization: `Bearer ${token}`,

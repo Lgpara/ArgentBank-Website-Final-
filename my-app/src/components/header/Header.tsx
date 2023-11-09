@@ -1,15 +1,15 @@
 import Logo from "../../../appdata/images/argentBankLogo.png"
 import { NavLink, useNavigate } from "react-router-dom"
-import getToken from "./../../scripts/getToken.js"
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { storeToken } from "../../app/slices/TokenSlice";
 
 function Header() {
+  const dispatch = useDispatch()
   const user = useSelector((state) => state.userData);
-  const token = getToken()
+  const token = useSelector((state) => state.token)
   const navigate = useNavigate()
   function signOut(){
-    localStorage.setItem("token", "")
+    dispatch(storeToken(""))
     navigate("/")
   }
   return (

@@ -6,6 +6,12 @@ html {
   color: #2c3e50;
 }
 
+#root {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 body {
   margin: 0;
   display: flex;
@@ -15,6 +21,7 @@ body {
 
 .main {
   flex: 1;
+  margin-bottom: 0;
 }
 
 .bg-dark {
@@ -169,7 +176,6 @@ body {
 .sign-in-content {
   box-sizing: border-box;
   background-color: white;
-  width: 300px;
   margin: 0 auto 60px auto;
   margin-top: 3rem;
   padding: 2rem;
