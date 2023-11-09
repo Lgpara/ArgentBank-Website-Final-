@@ -1,3 +1,39 @@
+.account2 {
+  width: calc(100vw - 240px);
+  background-color: #3D3D3D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: white;
+}
+.account2 *:not(.fa-chevron-down) {
+  font-weight: 300;
+}
+.account2 .account-content-wrapper {
+  text-align: start;
+}
+.account2 .account-content-wrapper .account-title {
+  font-size: 18px;
+  font-weight: 100;
+  margin-bottom: 16px;
+}
+.account2 .account-content-wrapper .account-amount {
+  font-size: 30px;
+  margin: 0 0 16px 0;
+}
+.account2 .account-content-wrapper .account-amount-description {
+  margin-bottom: 10px;
+}
+.account2 .account-content-wrapper .fa-chevron-down {
+  display: block !important;
+}
+.account2 .account-content-wrapper .transaction-button {
+  display: none;
+}
+
 .editElement {
   padding: 0 100px;
 }

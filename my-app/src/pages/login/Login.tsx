@@ -1,4 +1,4 @@
-import Axios from "axios"
+import Axios from "axios";
 import { useRef } from "react"
 import { useNavigate } from 'react-router-dom';
 
@@ -15,6 +15,7 @@ export default function Login(){
       email: logForm.current[0].value,
       password: logForm.current[1].value
     }
+    console.log(logs)
     Axios.post('http://localhost:3001/api/v1/user/login', logs)
       .then(response => {
         localStorage.setItem("token", response.data.body.token)

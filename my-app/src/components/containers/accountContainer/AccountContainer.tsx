@@ -1,18 +1,21 @@
-import "./AccountContainer.css"
+import { useLocation } from "react-router";
 
-export default function AccountContainer() {
-  const accountName = "Argent Bank Checking (x3448)"
-  const accountBalance = "$48,098.43"
-  const infoMessage = "Available balance"
+export default function AccountContainer(props) {
+  const location = useLocation()
+  const thisLocation = location.pathname
+  const { type, accountNumber, balance, description } = props.accountData;
 
   return (
-    <div className="AccountContainer">
-      <div className="data">
-        <p className="accountName">{accountName}</p>
-        <p className="accountBalance">{accountBalance}</p>
-        <p className="infoMessage">{infoMessage}</p>
-      </div>
-      <i className="fa-solid fa-chevron-right"></i>
-    </div>
+    <section className={thisLocation === "/profile/edit"?  "account2 account": "account"}>
+        <div className="account-content-wrapper">
+          <h3 className="account-title">Argent Bank {type} {accountNumber}</h3>
+          <p className="account-amount">{balance}</p>
+          <p className="account-amount-description">{description}</p>
+        </div>
+        <div className="account-content-wrapper cta">
+          <button className="transaction-button">View transactions</button>
+          <i className="fa-solid fa-chevron-down fa-rotate-270"></i>
+        </div>
+    </section>
   )
 }

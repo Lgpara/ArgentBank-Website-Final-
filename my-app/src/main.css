@@ -170,7 +170,7 @@ body {
   box-sizing: border-box;
   background-color: white;
   width: 300px;
-  margin: 0 auto;
+  margin: 0 auto 60px auto;
   margin-top: 3rem;
   padding: 2rem;
 }
@@ -289,4 +289,8 @@ body {
   .transaction-button {
     width: 200px;
   }
+}
+
+.fa-chevron-down {
+  display: none;
 }
